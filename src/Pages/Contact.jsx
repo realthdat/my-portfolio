@@ -34,8 +34,8 @@ const ContactPage = () => {
     setIsSubmitting(true);
 
     Swal.fire({
-      title: 'Mengirim Pesan...',
-      html: 'Harap tunggu selagi kami mengirim pesan Anda',
+      title: 'Sending Message...',
+      html: 'Please wait while we send your message',
       allowOutsideClick: false,
       didOpen: () => {
         Swal.showLoading();
@@ -55,8 +55,8 @@ const ContactPage = () => {
 
       if (response.ok) {
         Swal.fire({
-          title: 'Berhasil!',
-          text: 'Pesan Anda telah berhasil terkirim!',
+          title: 'Success!',
+          text: 'Your message has been successfully sent!',
           icon: 'success',
           confirmButtonColor: '#6366f1',
           timer: 2000,
@@ -69,12 +69,12 @@ const ContactPage = () => {
           message: "",
         });
       } else {
-        throw new Error('Gagal mengirim pesan');
+        throw new Error('Failed to send message');
       }
     } catch (error) {
       Swal.fire({
-        title: 'Gagal!',
-        text: 'Terjadi kesalahan. Silakan coba lagi nanti.',
+        title: 'Failed!',
+        text: 'An error occurred. Please try again later.',
         icon: 'error',
         confirmButtonColor: '#6366f1'
       });
@@ -164,7 +164,7 @@ const ContactPage = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email Anda"
+                  placeholder="Your Email"
                   value={formData.email}
                   onChange={handleChange}
                   disabled={isSubmitting}
