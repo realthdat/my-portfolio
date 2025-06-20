@@ -1,11 +1,12 @@
 {
-  "name": "portofolio-v5",
+  "name": "portofolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "vercel-build": "npm install --legacy-peer-deps && npm run build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
