@@ -6,6 +6,7 @@ import About from "./Pages/About";
 import AnimatedBackground from "./components/Background";
 import Navbar from "./components/Navbar";
 import Portofolio from "./Pages/Portofolio";
+import SocialActivity from "./Pages/SocialActivity";
 import ContactPage from "./Pages/Contact";
 import ProjectDetails from "./components/ProjectDetail";
 import WelcomeScreen from "./Pages/WelcomeScreen";
@@ -29,6 +30,7 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
           <Home />
           <About />
           <Portofolio />
+          <SocialActivity />
           <ContactPage />
           <footer>
             <center>
@@ -74,7 +76,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
         <Route path="/project/:id" element={<ProjectPageLayout />} />
-         <Route path="*" element={<NotFoundPage />} /> {/* Ini route 404 */}
+        <Route path="/social-activity" element={<SocialActivity />} />
+        <Route path="*" element={<NotFoundPage />} /> {/* Ini route 404 */}
       </Routes>
     </BrowserRouter>
   );
